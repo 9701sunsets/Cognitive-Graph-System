@@ -1,30 +1,30 @@
 # 🧠 Cognitive Graph — AI 认知图谱系统
 
-> 模拟人脑语义记忆结构的交互式知识图谱，支持 AI 自动解析、可视化编辑与认知联想生成。
+> 模拟人脑语义记忆结构的交互式知识图谱，支持AI自动解析、可视化编辑与认知联想生成。
 
 ---
 
-## ✨ 功能特性
+##  功能特性
 
 | 功能 | 描述 |
 |------|------|
-| 📝 文本解析 | 输入任意文本，AI 自动提取概念节点和关系 |
-| 🕸️ 图谱可视化 | 交互式节点图，支持拖拽、缩放、连线 |
-| ✏️ 手动编辑 | 双击编辑节点，手动新增/删除节点和关系 |
-| ✦ 认知联想 | 点击节点，AI 生成跨领域联想并可一键添加 |
-| 💾 本地存储 | 图谱数据保存到本地 JSON 文件 |
+|  文本解析 | 输入任意文本，AI自动提取概念节点和关系 |
+|  图谱可视化 | 交互式节点图，支持拖拽、缩放、连线 |
+|  手动编辑 | 双击编辑节点，手动新增/删除节点和关系 |
+|  认知联想 | 点击节点，AI生成跨领域联想并可一键添加 |
+|  本地存储 | 图谱数据保存到本地JSON文件 |
 
 ---
 
-## 🚀 快速启动
+##  快速启动
 
-### 方式一：手动启动（推荐开发）
+### 方式一：手动启动
 
 #### 1. 配置环境变量
 
 ```bash
 cp .env.example .env
-# 编辑 .env，填入你的 API Key
+# 编辑 .env，填入你的API Key
 ```
 
 #### 2. 启动后端
@@ -64,62 +64,10 @@ docker-compose up --build
 
 访问 `http://localhost:3000`
 
----
-
-## 📁 项目结构
-
-```
-cognitive-graph/
-├── backend/
-│   ├── app/
-│   │   ├── main.py              # FastAPI 入口
-│   │   ├── api/
-│   │   │   ├── parse.py         # POST /api/parse
-│   │   │   ├── associate.py     # POST /api/associate
-│   │   │   └── graph.py         # GET/POST /api/graph/*
-│   │   ├── models/
-│   │   │   └── schemas.py       # Pydantic 数据模型
-│   │   └── services/
-│   │       ├── llm.py           # LLM 调用（OpenAI/Anthropic）
-│   │       └── storage.py       # 本地 JSON 存储
-│   ├── data/                    # 图谱数据存储目录
-│   ├── requirements.txt
-│   └── Dockerfile
-│
-├── frontend/
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── layout.tsx       # Root layout
-│   │   │   ├── page.tsx         # 主页（三栏布局）
-│   │   │   └── globals.css      # 全局样式（科幻主题）
-│   │   ├── components/
-│   │   │   ├── graph/
-│   │   │   │   ├── GraphCanvas.tsx   # ReactFlow 画布
-│   │   │   │   ├── CognitiveNode.tsx # 自定义节点
-│   │   │   │   └── CognitiveEdge.tsx # 自定义边
-│   │   │   ├── panels/
-│   │   │   │   ├── InputPanel.tsx    # 左侧输入面板
-│   │   │   │   └── InfoPanel.tsx     # 右侧信息+联想面板
-│   │   │   └── ui/
-│   │   │       ├── Header.tsx        # 顶部导航
-│   │   │       └── Toast.tsx         # 通知组件
-│   │   ├── lib/
-│   │   │   ├── api.ts           # API 请求封装
-│   │   │   └── store.ts         # Zustand 全局状态
-│   │   └── types/
-│   │       └── index.ts         # TypeScript 类型定义
-│   ├── package.json
-│   ├── tailwind.config.js
-│   └── Dockerfile
-│
-├── docker-compose.yml
-├── .env.example
-└── README.md
-```
 
 ---
 
-## 🔌 API 文档
+##  API 文档
 
 ### POST `/api/parse`
 文本解析为知识图谱
@@ -159,7 +107,7 @@ cognitive-graph/
 
 ---
 
-## 🎨 UI 交互说明
+## UI 交互说明
 
 | 操作 | 效果 |
 |------|------|
@@ -173,7 +121,7 @@ cognitive-graph/
 
 ---
 
-## 🔧 配置说明
+## 配置说明
 
 ### LLM Provider 切换
 
@@ -191,16 +139,6 @@ OPENAI_API_KEY=sk-...
 
 ---
 
-## 📋 简历亮点
-
-- **Graph RAG 思想**：知识图谱 + LLM 联合推理
-- **全栈实现**：Next.js + FastAPI + ReactFlow
-- **自定义可视化**：科幻风格知识图谱，自定义节点/边渲染
-- **认知联想系统**：模拟人脑跨领域联想机制
-- **工程化设计**：Zustand 状态管理、Docker 容器化、RESTful API
-
----
-
 ## 🔮 后续扩展计划
 
 - [ ] Neo4j 图数据库集成
@@ -212,4 +150,4 @@ OPENAI_API_KEY=sk-...
 
 ---
 
-*Built with ❤️ — AI Cognitive Graph System*
+*Built with ❤️ ~ — AI Cognitive Graph System*
